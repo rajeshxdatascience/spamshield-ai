@@ -5,6 +5,12 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 import re
+import nltk
+
+# In sabhi ko download karna zaroori hai
+nltk.download('punkt')
+nltk.download('punkt_tab') # Naye NLTK version ke liye ye line mandatory hai
+nltk.download('stopwords')
 
 # --- Resources Loading ---
 @st.cache_resource
