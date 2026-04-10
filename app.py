@@ -124,6 +124,13 @@ if predict_btn:
             if scam_warning:
                 st.warning(scam_warning)
 
+# app.py mein prediction ke baad ye logic dalein
+if result == 1 and confidence < 70:
+    # Agar model 70% se kam sure hai aur text professional hai
+    safe_triggers = ['statement', 'review', 'dashboard', 'sincerely', 'regards']
+    if any(word in input_sms.lower() for word in safe_triggers):
+        st.info("ℹ️ **Note:** This looks like a standard notification. While the model is suspicious, it may be a False Positive.")
+
 # --- Footer Instruction ---
 st.markdown("---")
 st.caption("Instructions: Always check the sender's email address. AI can make mistakes.")
