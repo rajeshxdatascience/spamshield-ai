@@ -77,6 +77,7 @@ streamlit run app.py
 
 ## Usage
 
+* You can try the live app here: https://spamshield-ai-rajesh.streamlit.app/
 * Enter email text in the input box
 * Click on "Check Spam"
 * The model predicts whether the email is spam or not
